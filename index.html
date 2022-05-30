@@ -3,7 +3,7 @@
 
 <head>
     <title>Adarsh Inter College</title>
-
+        <link rel="stylesheet" type="text/css" href="styles/nav.css">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" type="image/x-icon" href="images/fav.png">
@@ -15,45 +15,49 @@
             display: none;
         }
     </style>
+
 </head>
 
-<body style="background-color: rgb(255, 255, 255); font-size: large;">
+<body style="background-color: #4185f4; font-size: large;">
     <div id="page">
         <div id="heading">
-            <img src="images/logo1.jpeg" style="width: 10%;">
-            <h1 style="font-size:7vw;font-weight:900;color: black; text-decoration: double; font-family: Georgia, 'Times New Roman', Times, serif;">Adarsh Inter College</h1>
+            <img src="images/logo1.jpeg" style="width: 10%; margin-left: 20px;">
+            <h2 style="font-size:7vw;font-weight:900;color: black; text-decoration: double; font-family: Georgia, 'Times New Roman', Times, serif;">Adarsh Inter College</h2>
 
         </div>
         <div id="header">
-            <div class="navbar">
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="window.open('index.html','_self')">Home</button>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="window.open('temp.html','_self')">About Us</button>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="window.open('temp.html','_self')">Admission</button>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="myFunction()">Faculties
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="myDropdown">
-                        <a href="temp.html">1</a>
-                        <a href="temp.html">2</a>
-                        <a href="temp.html">3</a>
-                        <a href="temp.html">4</a>
-                        <a href="temp.html">5</a> 
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="window.open('temp.html','_self')">Gallery</button>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="window.open('#contact','_self')">Contact Us</button>
-                </div>
+            
+            <!-- MENU OVERLAY -->
+            <div class="overlay overlay-slide-left" id="overlay">
+                <!-- MENU ITEMS -->
+                <nav>
+                    <ul>
+                        <li id="nav-1" class="slide-out-1 center">
+                            <a href="index.html" class="center">Home</a>
+                        </li>
+                        <li id="nav-2" class="slide-out-2 center">
+                            <a href="temp.html" class="center">About</a>
+                        </li>
+                        <li id="nav-3" class="slide-out-3 center">
+                            <a href="temp.html" class="center">Admissions</a>
+                        </li>
+                        <li id="nav-4" class="slide-out-4 center">
+                            <a href="temp.html" class="center">Gallery</a>
+                        </li>
+                        <li id="nav-5" class="slide-out-5 center">
+                            <a href="temp.html" class="center">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+            <!-- HAMBURGER MENU -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="menu-bar1"></div>
+                <div class="menu-bar2"></div>
+                <div class="menu-bar3"></div>
+            </div>
+            
+
         </div>
         <div class="slideshow">
             <div class="w3-content w3-section w3-display-container"
@@ -95,6 +99,7 @@
             <div>
                 <h1 style="font-size: xx-large;">COMING SOON</h1>
             </div>
+            
         </div>
 
         <!-- <div class="youtube">
@@ -236,6 +241,51 @@
                 }
             }
         }
+
+        const hamburgerMenu = document.querySelector("#hamburger-menu");
+            const overlay = document.querySelector("#overlay");
+            const nav1 = document.querySelector("#nav-1");
+            const nav2 = document.querySelector("#nav-2");
+            const nav3 = document.querySelector("#nav-3");
+            const nav4 = document.querySelector("#nav-4");
+            const nav5 = document.querySelector("#nav-5");
+            const navItems = [nav1, nav2, nav3, nav4, nav5];
+
+            // Control Navigation Animation
+            function navAnimation(val1, val2) {
+                navItems.forEach((nav, i) => {
+                    nav.classList.replace(`slide-${val1}-${i + 1}`, `slide-${val2}-${i + 1}`);
+                });
+            }
+
+            function toggleNav() {
+                // Toggle: Hamburger Open/Close
+                hamburgerMenu.classList.toggle("active");
+
+                //   Toggle: Menu Active
+                overlay.classList.toggle("overlay-active");
+
+                if (overlay.classList.contains("overlay-active")) {
+                    // Animate In - Overlay
+                    overlay.classList.replace("overlay-slide-left", "overlay-slide-right");
+
+                    // Animate In - Nav Items
+                    navAnimation("out", "in");
+                } else {
+                    // Animate Out - Overlay
+                    overlay.classList.replace("overlay-slide-right", "overlay-slide-left");
+
+                    // Animate Out - Nav Items
+                    navAnimation("in", "out");
+                }
+            }
+
+            // Events Listeners
+            hamburgerMenu.addEventListener("click", toggleNav);
+            navItems.forEach((nav) => {
+                nav.addEventListener("click", toggleNav);
+            });
+
     </script>
 </body>
 
