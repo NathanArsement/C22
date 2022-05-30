@@ -195,8 +195,8 @@ nav li a:hover:after {
 .menu-bar1,
 .menu-bar2,
 .menu-bar3 {
-    width: 3.5rem;
-    height: 0.2rem;
+    width: 5vw;
+    height: 0.2vh;
     background-color: black;
     margin: 0.8rem 0;
     transition: 0.4s;
