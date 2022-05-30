@@ -1,6 +1,6 @@
 .navbar {
     overflow: hidden;
-    background-color: navy;
+    background-color: cyan;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
@@ -19,7 +19,7 @@
 
     float: left;
     font-size: 16px;
-    color: white;
+    color: black;
     text-align: center;
     padding: 11px 16px;
     text-decoration: none;
@@ -34,7 +34,7 @@
 .dropdown .dropbtn {
     float: left;
     font-size: 16px;
-    color: white;
+    color: black;
     text-align: center;
     padding: 11px 16px;
     text-decoration: none;
@@ -44,7 +44,7 @@
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: black;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -255,12 +255,12 @@ li:where(:hover, :focus-visible)~a {
 }
 
 .main {
-    background-color: navy;
+    background-color: #ccc;
     display: flex;
     flex-direction: row;
     margin: 2%;
     flex-wrap: wrap;
-    color: white;
+    color: black;
     justify-content: center;
 }
 
