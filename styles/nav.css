@@ -70,7 +70,7 @@ nav ul {
 }
 
 nav ul li {
-    height: 20%;
+    height: 20vh;
 }
 
 nav li:nth-of-type(1) {
@@ -101,6 +101,7 @@ nav li a {
 nav li a:hover,
 nav li a:active {
     transform: scale(1.1);
+    color: #000000;
 }
 
 nav li a:hover:after {
@@ -110,6 +111,7 @@ nav li a:hover:after {
     justify-content: center;
     font-size: 4rem;
     margin-left: 1rem;
+    color: #000000;
 }
 
 /***********************/
@@ -195,15 +197,15 @@ nav li a:hover:after {
 .menu-bar1,
 .menu-bar2,
 .menu-bar3 {
-    width: 5vw;
-    height: 0.2vh;
+    width: 6vw;
+    height: 0.2rem;
     background-color: black;
     margin: 0.8rem 0;
     transition: 0.4s;
 }
 
 .menu-bar2 {
-    width: 2rem;
+    width: 3vw;
     margin-left: auto;
 }
 
@@ -252,36 +254,7 @@ section {
     color: #fce38a;
 }
 
-h1 {
-    font-size: 3rem;
-    background-color: rgb(0, 0, 0, 0.6);
-    padding: 0.5rem 1rem;
-}
 
-section#home {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("https://images.unsplash.com/photo-1473172707857-f9e276582ab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") no-repeat center center / cover;
-}
-
-section#about {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("https://images.unsplash.com/photo-1543269664-647163ef2ee4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") no-repeat center center / cover;
-}
-
-section#skills {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80") no-repeat center center / cover;
-}
-
-section#projects {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80") no-repeat center center / cover;
-}
-
-section#contact {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") no-repeat center center / cover;
-}
 
 /**************************/
 /* MEDIA QUERY */

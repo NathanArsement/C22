@@ -1,50 +1,45 @@
-#navmenu{
-    display: block;
-    width:28px;
-    height:2px;
-    border-radius: 9999px;
-    background-color: black;
-
-}
-#navmenu > span:not(:last-child){
-    margin-bottom: 7px;
-
-}
-#navmenu, #navmenu > span{
-    transition: all .4s ease-in-out;
-}
-#navmenu.active{
-    transition-delay: 0.8s;
-    transform:rotate(45deg)
-
-}
-#navmenu.active > span:nth-child(2) {
-    width:0;
-}
-#navmenu.active>span:nth-child(1), #navmenu.active>span:nth-child(3) {
-    transition-delay: .4s;
-}
-#navmenu.active>span:nth-child(1){
-    transform: translateY(9px);
-}
-#navmenu.active>span:nth-child(3){
-    transform: translateY(-9px) rotate(90deg);
+@font-face {
+    font-family: Peignot;
+    src: url(PeignotLTStd-Bold.otf) format(truetype);
 }
 .navbar {
     overflow: hidden;
-    background-color: cyan;
+    background-color: rgb(255, 230, 0);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: baseline;
     align-content: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+nav {
+    text-align: center;
+    
+}
+.mobHead{
+    display: none;
+}
+#modHeading {
+    display: none;
 }
 
 @media (max-width:801px) {
     .navbar {
         display: none;
     }
+    .mobHead{
+        display: block;
+    }
+        #modHeading {
+            display: block;
+        }
+}
 
+.heading{
+    padding: 16px;
 }
 
 .navbar a {
@@ -60,6 +55,7 @@
 .dropdown {
     float: left;
     overflow: hidden;
+    align-self: center;
 }
 
 
@@ -68,6 +64,7 @@
     font-size: 16px;
     color: black;
     text-align: center;
+    vertical-align: middle;
     padding: 11px 16px;
     text-decoration: none;
     float: left;
@@ -77,7 +74,7 @@
     border: none;
     outline: none;
     color: black;
-    padding: 14px 16px;
+    padding: 30px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -134,9 +131,10 @@ body {
     font-family: Arial;
     font-size: 14px;
     margin: 0;
-
-    background-repeat: repeat;
-    background-size: auto;
+    background-image: url(../images/bg.jpg);
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
 
 
 }
@@ -236,16 +234,7 @@ li:where(:hover, :focus-visible)~a {
     text-shadow: 1px 1px 0 navy;
 }
 
-#heading {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2vw;
-    text-align: center;
-    font-weight: 900;
-    color: rgba(9, 16, 41, 0.877);
-    display: flex;
-    align-items: center;
-    background: inherit;
-}
+
 
 .slideshow {
     justify-content: left;
@@ -287,7 +276,7 @@ li:where(:hover, :focus-visible)~a {
 }
 
 .main {
-    background-color: #ccc;
+    background-image: url(../images/mainbg.jpg);
     display: flex;
     flex-direction: row;
     margin: 2%;
@@ -296,41 +285,8 @@ li:where(:hover, :focus-visible)~a {
     justify-content: center;
 }
 
-.principal {
-    flex: 60%;
-    display: flex;
-    justify-content: left;
 
 
-}
-
-#principal_image {
-    height: 20%;
-    border-radius: 100%;
-    padding: 15px 15px 15px 15px;
-    position: sticky;
-    top: 0;
-}
-
-@media screen {
-    #principal_image {
-        height: 20vh
-    }
-
-    .principal_msg {
-        word-wrap: break-word;
-        font-size: small;
-
-    }
-}
-
-.youtube {
-    flex: 30%;
-    border: solid;
-    border-radius: 5px;
-    padding: 1%;
-
-}
 
 .contact {
     background-color: rgb(34, 32, 32);
@@ -348,12 +304,57 @@ tr {
     border-color: white;
 }
 
-.principal_msg {
-    font-size: large;
-    padding-right: 10px;
-    text-align: justify;
-}
-
 #contact {
     color: white;
+}
+
+
+
+
+nav {
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+
+.message{
+    background-color: rgba(251, 255, 0, 0.25);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        margin: 20px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+}
+#msgImage{
+    height:20vh;
+    box-shadow: 0 0 10px 15px #f2bb16;
+    margin-left: 15px;
+}
+#msg{
+    
+    margin:15px;
+    font-weight: 800;
+    text-align: justify;
+    color: rgb(0, 17, 255);
+    text-shadow: -1px 1px 0 #fff,
+            1px 1px 0 #fff,
+            1px -1px 0 #fff,
+            -1px -1px 0 #fff;
+}
+
+right{
+    text-align: right;
 }
