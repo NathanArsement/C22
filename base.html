@@ -9,7 +9,6 @@
     <link rel="icon" type="image/x-icon" href="images/fav.png">
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="//db.onlinewebfonts.com/c/51e2898b5536cb185aa56fc84687c0c0?family=Peignot+LT+Std" rel="stylesheet" type="text/css"/>
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="styles/ie6.css" /><![endif]-->
     <style>
         .mySlides {
@@ -18,11 +17,13 @@
     </style>
 </head>
 
-<body style="font-size: large;">
+<body style="background-color: rgb(255, 255, 255); font-size: large;">
     <div id="page">
-            <div id="modHeading"><center><img  src="images/logo.png" style="width: 50%; margin: 10px;"></center></div>
+        <div id="modHeading">
+            <center><img src="images/logo.png" style="width: 50%; margin: 10px;"></center>
+        </div>
         <nav>
-            
+
             <div class="navbar">
                 <img src="images/logo.png" style="width: 25%;">
                 <div class="dropdown">
@@ -89,13 +90,13 @@
 
 
 
-                
-                
-                
-                
-                
 
-            
+
+
+
+
+
+
         </div>
         <div class="slideshow">
             <div class="w3-content w3-section w3-display-container"
@@ -134,51 +135,16 @@
             </div>
         </div>
         <div class="main">
-            
-            <div class="message">
-                <img src="images/managerPic.png" id="msgImage">
-                <div id="msg">
-                    <p>
-                        The students are the mirror of the institute through that anybody can see reflection of the same . Attending the
-                        students we can assessed easily . We believe firmliy that all the teachers of the institute would be successful to
-                        provide the best atmosphere and environment in which the students will bloom inevitably and will gain internal good
-                        qualities and further they might be the best citizen of the future . We prepare students with real and pure values
-                        according to our goal . The new Session would be of advantage surely
-                    </p>
-                    <p style="text-align: right; font-size: xx-large; color: blueviolet; font-family: 'Peignot LT Std';">
-                        Om Prakash Agarwal
-                    </p>
-                    <p style="text-align: right; color: #000;">
-                        Manager
-                    
-                    </p>
-                </div>
-                
-            </div>
-            
-            <div class="message">
-                <img src="images/principalPic.png" id="msgImage">
-                <div id="msg"><p>
-                    In the new session of 2022-23 the institute is ready with a new aspet completely in the field of education in which
-                    we
-                    are ready to strive for providing education full of cultural & human values so that intellectual powers may bloom in
-                    full swing . Rapidly changing in the present age of materialism the institute is very aggressive to provide English
-                    medium education along with Hindi medium facilities . We hope that the students would be capable in every sphere of
-                    life
-                    getting the directions & suggestions of their Teachers .
-                    </p>
-                    <p style="text-align: right; color: #000;">
-                    With Regards
-                    </p><p style="text-align: right; font-size: xx-large; color: blueviolet; font-family: 'Peignot LT Std';">
-                    Barun Pratap Singh
-                    </p><p style="text-align: right; color:#000;">
-                    Principal
-                
-                </p></div>
-                
+            <div>
+                <h1 style="font-size: xx-large;">COMING SOON</h1>
             </div>
         </div>
 
+        <!-- <div class="youtube">
+                <h1>Our YouTube:</h1>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/4DlJHYLiB1c">
+                </iframe>
+            </div> -->
 
     </div>
 
@@ -357,23 +323,23 @@
         navItems.forEach((nav) => {
             nav.addEventListener("click", toggleNav);
         });
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function () { myFunction() };
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
 
-    // Get the navbar
-    var navbar = document.getElementById("navbar");
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
 
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop;
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
 
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
         }
-    }
     </script>
 </body>
 
