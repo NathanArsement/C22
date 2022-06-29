@@ -22,8 +22,8 @@ html {
     scroll-behavior: smooth;
 }
 
-a:link,
-a:visited {
+nav.a:link,
+nav.a:visited {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
